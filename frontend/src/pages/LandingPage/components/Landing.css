@@ -1,0 +1,61 @@
+@keyframes slide-right {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-list span {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slide-right 0.5s ease-in-out forwards;
+  }
+  
+  .slide-list span:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .slide-list span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .slide-list span:nth-child(5) {
+    animation-delay: 0.6s;
+  }
+  
+  .slide-list span:nth-child(7) {
+    animation-delay: 0.8s;
+  }
+  
+  .slide-list span:nth-child(9) {
+    animation-delay: 1s;
+  }  
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply the animation when the element becomes visible */
+  .slide-in {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Position before sliding in */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .slide-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideIn 1s forwards;
+  }

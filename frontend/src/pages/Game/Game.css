@@ -1,0 +1,268 @@
+/* Game.css */
+
+.game-background {
+    background-image: url('./background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.money-display {
+    position: absolute;
+    top: 20px;
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.button-container {
+    position: absolute;
+    display: inline-block;
+}
+
+.game-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.factory-image {
+    width: 150px;
+    height: 150px;
+    transform: translateY(-41px) translateX(-10px) /* Moves the factory image slightly upward */
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.button-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.landfill{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-size: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.store{
+    position: absolute;
+    width: 258px;
+    height: 270px;
+    background-size: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.landfill {
+    background-image: url('./landfill.png');
+}
+
+.store {
+    background-image: url('./store.png');
+}
+
+.landfill:hover{
+    transform: scale(1.2);
+}
+
+.landfill:active{
+    transform: scale(0.8);
+}
+
+.conveyor-item {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 680px;
+}
+
+.waterBottle {
+    animation: plastic 5s linear forwards;
+    top: -165px;
+    left: -240px;
+}
+
+@keyframes plastic {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(680px, 0px);
+    }
+    75% {
+        transform: translate(680px, 170px);
+    }
+    100% {
+        transform: translate(265px, 170px);
+    }   
+}
+
+.yarn {
+    animation: yarn 8s linear forwards;
+    top: 0px;
+    left: 0px;
+}
+
+@keyframes yarn {
+    0% {
+        transform: translate(0, 0);
+    }
+    40% {
+        transform: translate(-370px, 0px);
+    }
+    60% {
+        transform: translate(-370px, 170px);
+    }
+    100% {
+        transform: translate(0, 170px);
+    }   
+}
+
+.cotton {
+    animation: cotton 12s linear forwards;
+    top: -160px;
+    left: 0px;
+}
+
+@keyframes cotton {
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(440px, 0px);
+    }
+    30% {
+        transform: translate(440px, 170px);
+    }
+    70% {
+        transform: translate(-360px, 170px);
+    }  
+    80% {
+        transform: translate(-360px, 330px);
+    }   
+    100% {
+        transform: translate(0, 330px);
+    }
+}
+
+.shirt {
+    animation: shirt 3s linear forwards;
+    top: 170px;
+    left: 0px;
+}
+
+@keyframes shirt {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(490px, 0px);
+    }   
+}
+
+.hat {
+    animation: hat 3s linear forwards;
+    top: 170px;
+    left: 0px;
+}
+
+@keyframes hat {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(470px, 0px);
+    }   
+}
+
+.store-grow {
+    animation: sell 0.7s ease-in-out;
+}
+
+@keyframes sell {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }   
+}
+
+.timer-container {
+    position: absolute;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+.timer {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 5px;
+    width: 120px;
+}
+
+.timer-bar {
+    height: 5px;
+    background-color: #4caf50;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.upgrade-icon {
+    width: 40px;
+    height: 40px;
+    margin-top: 90px;
+    margin-left: 180px;
+    z-index: 5;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.upgrade-icon1 {
+    width: 40px;
+    height: 40px;
+    margin-top: 420px;
+    margin-left: -40px;
+    z-index: 5;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.upgrade-icon:hover {
+    transform: scale(1.2);
+}
+
+.upgrade-icon1:hover {
+    transform: scale(1.2);
+}
